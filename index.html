@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | TON_NOM</title>
+  <style>
+    :root { --bg:#0b0f17; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#60a5fa; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#070a10, var(--bg)); color:var(--text); }
+    a{color:var(--accent); text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:28px}
+    header{padding:34px 0 18px}
+    .kicker{color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}
+    h1{font-size:2.1rem;margin:.4rem 0 .6rem}
+    .pitch{color:var(--muted);max-width:70ch;line-height:1.55}
+    nav{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-block;border:1px solid #233045;background:#0c1322;padding:10px 12px;border-radius:12px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    section{padding:18px 0}
+    .card{grid-column:span 12;background:rgba(17,24,39,.85);border:1px solid #233045;border-radius:18px;padding:16px}
+    @media(min-width:860px){ .card.half{grid-column:span 6} }
+    h2{font-size:1.35rem;margin:0 0 10px}
+    .meta{color:var(--muted);font-size:.92rem;line-height:1.5}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .tag{font-size:.8rem;color:#cbd5e1;border:1px solid #2a3a55;background:#0c1322;border-radius:999px;padding:6px 10px}
+    .bullets{margin:10px 0 0;padding-left:18px;color:#d1d5db;line-height:1.55}
+    footer{padding:24px 0;color:var(--muted);font-size:.9rem;border-top:1px solid #233045;margin-top:22px}
+    .two{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:860px){ .two{grid-template-columns:1fr 1fr} }
+    .callout{border-left:3px solid var(--accent);padding-left:12px;color:#dbeafe;margin-top:12px}
+    .small{font-size:.9rem;color:var(--muted)}
+    .hr{height:1px;background:#233045;margin:18px 0}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header id="accueil">
+      <div class="kicker">Portfolio — Ingénieur aéronautique (4e année)</div>
+      <h1>TON_NOM</h1>
+      <p class="pitch">
+        Étudiant·e en école d’ingénieur aéronautique, orienté·e conception mécanique / CAO et validation (analyse, itération).
+        Je recherche un stage chez Interstellar Lab (Ivry) pour contribuer à des systèmes complexes, du prototypage à la validation.
+      </p>
+      <nav>
+        <a class="btn" href="#projets">Projets</a>
+        <a class="btn" href="#competences">Compétences</a>
+        <a class="btn" href="#apropos">À propos</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+      <div class="small" style="margin-top:10px;">
+        📍 Ivry (stage) · ✉️ ton.email@exemple.com · <a href="https://www.linkedin.com/in/ton-profil">LinkedIn</a> · <a href="https://github.com/toncompte">GitHub</a>
+      </div>
+    </header>
+
+    <div class="hr"></div>
+
+    <section id="projets">
+      <h2>Projets sélectionnés</h2>
+      <div class="grid">
+        <article class="card half">
+          <h3 style="margin:0 0 6px;">Châssis & suspension de moto — CATIA + tenue mécanique</h3>
+          <div class="meta">CAO · Assemblage · Interfaces · Analyse mécanique · Optimisation</div>
+          <div class="tags">
+            <span class="tag">CATIA</span><span class="tag">Conception</span><span class="tag">Assemblage</span>
+            <span class="tag">Tenue méca</span><span class="tag">Itération</span>
+          </div>
+          <p class="callout"><strong>Résultat :</strong> FS du ressort amélioré ~1.08 → ~1.55 et déplacement réduit ~42.5 mm → ~21.7 mm.</p>
+          <ul class="bullets">
+            <li>Modélisation d’un châssis tubulaire + sous-ensembles (roues, roulements, freinage, suspension).</li>
+            <li>Structuration : table des pièces, graphe de contacts, tables d’interfaces.</li>
+            <li>Étude mécanique : encastrement + charge verticale 2500 N, maillage 2 mm.</li>
+            <li>Optimisation paramétrique du ressort (contrainte / déplacement / FS).</li>
+          </ul>
+          <p class="small">→ Ajoute ici 3–6 images (rendus CATIA / schémas / résultats) + lien PDF.</p>
+        </article>
+
+        <article class="card half">
+          <h3 style="margin:0 0 6px;">Projet CAO — Poster ME323 (locomotive)</h3>
+          <div class="meta">Modélisation · Rendu/présentation · Travail en équipe</div>
+          <div class="tags">
+            <span class="tag">CAO</span><span class="tag">Visualisation</span><span class="tag">Poster</span>
+          </div>
+          <ul class="bullets">
+            <li>Modélisation d’un ensemble mécanique présenté sous forme de poster.</li>
+            <li>Mise en scène / rendu pour communication technique.</li>
+            <li>(À préciser) ton rôle exact : modélisation pièces, assemblage, rendu, documentation…</li>
+          </ul>
+          <p class="small">→ Mets le visuel du poster + 2–3 phrases sur contraintes & livrables.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="competences">
+      <h2>Compétences</h2>
+      <div class="two">
+        <div class="card">
+          <h3 style="margin:0 0 8px;">Techniques</h3>
+          <ul class="bullets">
+            <li>CAO : CATIA (modélisation, assemblage, mise en plan)</li>
+            <li>Analyse : notions de tenue mécanique / contraintes / maillage (selon tes outils)</li>
+            <li>(Ajoute) MATLAB / Python / ANSYS / Abaqus / SolidWorks… si tu as</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px;">Méthodo</h3>
+          <ul class="bullets">
+            <li>Structuration d’un projet : interfaces, intégration, itérations</li>
+            <li>Travail en équipe, répartition des lots, restitution claire</li>
+            <li>Rigueur doc : poster, slides, rapports</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos">
+      <h2>À propos</h2>
+      <div class="card">
+        <p class="meta" style="margin:0;">
+          4e année en école d’ingénieur aéronautique. Intérêt fort pour la conception de systèmes mécaniques,
+          l’intégration (interfaces/assemblage) et la validation (tests/analyses/itérations).
+          <br><br>
+          <strong>Ce que je cherche :</strong> un stage où je peux contribuer à des systèmes concrets, itérer vite, documenter proprement,
+          et apprendre au contact d’une équipe R&D.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="meta" style="margin:0;">
+          ✉️ ton.email@exemple.com<br>
+          LinkedIn : <a href="https://www.linkedin.com/in/ton-profil">ton-profil</a><br>
+          GitHub : <a href="https://github.com/toncompte">toncompte</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © TON_NOM — Portfolio. Dernière mise à jour : 2026.
+    </footer>
+  </div>
+</body>
+</html>
