@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio | KHARRAT Hugo</title>
+
   <style>
     :root{
       --bg:#0b0f17;
@@ -12,52 +13,55 @@
       --muted:#9ca3af;
       --accent:#60a5fa;
     }
+
     *{box-sizing:border-box}
+
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-      background:linear-gradient(180deg,#070a10, var(--bg));
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;
+      background:linear-gradient(180deg,#070a10,var(--bg));
       color:var(--text);
     }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:980px;margin:0 auto;padding:28px}
-    header{padding:34px 0 18px}
-    .kicker{color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}
-    h1{font-size:2.1rem;margin:.4rem 0 .6rem}
-    .pitch{color:var(--muted);max-width:72ch;line-height:1.55}
-    nav{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
-    .btn{display:inline-block;border:1px solid #233045;background:#0c1322;padding:10px 12px;border-radius:12px}
-    section{padding:18px 0}
-    .hr{height:1px;background:#233045;margin:18px 0}
 
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .wrap{max-width:1000px;margin:auto;padding:28px}
+
+    h1{font-size:2.2rem;margin:0 0 10px}
+    h2{margin-top:30px}
+
+    .kicker{color:var(--muted);text-transform:uppercase;font-size:.8rem}
+
     .card{
-      grid-column:span 12;
-      background:rgba(17,24,39,.85);
+      background:var(--card);
       border:1px solid #233045;
       border-radius:18px;
-      padding:16px;
+      padding:18px;
+      margin-top:18px;
     }
 
-    h2{font-size:1.35rem;margin:0 0 10px}
-    .meta{color:var(--muted);font-size:.92rem;line-height:1.5}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .tag{font-size:.8rem;color:#cbd5e1;border:1px solid #2a3a55;background:#0c1322;border-radius:999px;padding:6px 10px}
-    .small{font-size:.9rem;color:var(--muted)}
-    footer{padding:24px 0;color:var(--muted);font-size:.9rem;border-top:1px solid #233045;margin-top:22px}
+    .tags{margin-top:8px}
+    .tag{
+      display:inline-block;
+      border:1px solid #2a3a55;
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:.75rem;
+      margin-right:6px;
+      color:#cbd5e1;
+    }
 
-    /* Galerie images */
+    .meta{color:var(--muted);margin-top:8px}
+
     .gallery{
       display:grid;
       grid-template-columns:1fr;
       gap:12px;
-      margin-top:12px;
+      margin-top:14px;
     }
-    @media(min-width:860px){
-      .gallery{ grid-template-columns:1fr 1fr; }
-      .gallery.one{ grid-template-columns:1fr; }
+
+    @media(min-width:900px){
+      .gallery.two{grid-template-columns:1fr 1fr;}
     }
+
     figure{
       margin:0;
       border:1px solid #233045;
@@ -65,208 +69,142 @@
       overflow:hidden;
       background:#0c1322;
     }
-    figure img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
+
+    figure img{width:100%;display:block}
+
     figcaption{
-      padding:10px 12px;
-      color:#cbd5e1;
+      padding:10px;
       font-size:.9rem;
-      line-height:1.35;
-    }
-    .proj-title{
-      display:flex;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-bottom:6px;
-    }
-    .proj-title small{
-      color:var(--muted);
-      font-weight:500;
+      color:#cbd5e1;
     }
 
-    /* Contact box */
-    .contact{
-      display:grid;
-      gap:10px;
-      margin-top:10px;
+    footer{
+      margin-top:40px;
+      padding-top:20px;
+      border-top:1px solid #233045;
+      color:var(--muted);
+      font-size:.9rem;
     }
-    .contact span{color:var(--muted)}
   </style>
 </head>
 
 <body>
   <div class="wrap">
-    <header id="accueil">
-      <div class="kicker">Portfolio — Projets CAO / Conception</div>
-      <h1>KHARRAT Hugo</h1>
-      <p class="pitch">
-        Étudiant en 4ᵉ année d’école d’ingénieur aéronautique, orienté conception mécanique et CAO.
-        Je présente ici une sélection de projets de modélisation, d’assemblage et d’analyse mécanique.
+
+    <div class="kicker">Portfolio CAO</div>
+    <h1>KHARRAT Hugo</h1>
+    <p class="meta">
+      Étudiant en école d’ingénieur aéronautique — conception mécanique & modélisation CAO.
+    </p>
+
+    <h2>Projets CAO</h2>
+
+    <!-- PROJET MOTO -->
+    <div class="card">
+      <h3>Moto — CATIA V5 R19 + étude mécanique amortisseur</h3>
+
+      <div class="tags">
+        <span class="tag">CATIA</span>
+        <span class="tag">Châssis</span>
+        <span class="tag">Suspension</span>
+        <span class="tag">Analyse</span>
+      </div>
+
+      <p class="meta">
+        Conception complète d’une moto sous CATIA V5 R19 avec assemblage et étude de la tenue mécanique
+        de l’amortisseur (ressort).
       </p>
 
-      <nav>
-        <a class="btn" href="#projets">Projets</a>
-        <a class="btn" href="#competences">Compétences</a>
-        <a class="btn" href="#contact">Contact</a>
-      </nav>
+      <div class="gallery two">
+        <figure>
+          <img src="moto-1.png">
+          <figcaption>
+            <strong>Moto — vue globale :</strong> présentation du projet de conception sous CATIA.
+          </figcaption>
+        </figure>
 
-      <div class="small" style="margin-top:10px;">
-        ✉️ ton.email@exemple.com · <a href="https://www.linkedin.com/">LinkedIn</a> · <a href="https://github.com/hydroxpro">GitHub</a>
+        <figure>
+          <img src="moto-2.png">
+          <figcaption>
+            <strong>Étude mécanique :</strong> analyse de la tenue mécanique du ressort (contraintes, FS, déplacement).
+          </figcaption>
+        </figure>
       </div>
-    </header>
+    </div>
 
-    <div class="hr"></div>
+    <!-- PROJET TRAIN -->
+    <div class="card">
+      <h3>Train électrique (jouet) — modélisation & assemblage</h3>
 
-    <!-- PROJETS -->
-    <section id="projets">
-      <h2>Projets CAO</h2>
-
-      <div class="grid">
-
-        <!-- PROJET 1 : MOTO -->
-        <article class="card">
-          <div class="proj-title">
-            <h3 style="margin:0;">Moto — CATIA V5 R19 (conception) + étude mécanique amortisseur</h3>
-            <small>CATIA · Assemblage · Analyse</small>
-          </div>
-
-          <div class="tags">
-            <span class="tag">CATIA V5 R19</span>
-            <span class="tag">Châssis</span>
-            <span class="tag">Suspension</span>
-            <span class="tag">Tenue mécanique</span>
-          </div>
-
-          <p class="meta" style="margin:10px 0 0;">
-            Conception d’une moto sous CATIA V5 R19, avec assemblage et étude de tenue mécanique du ressort d’amortisseur.
-            Itérations de conception pour améliorer la sécurité (FS) et réduire le déplacement.
-          </p>
-
-          <div class="gallery">
-            <figure>
-              <img src="moto-1.png" alt="Présentation du projet moto sous CATIA" />
-              <figcaption><strong>Moto — vue globale :</strong> présentation du projet de conception sous CATIA V5 R19.</figcaption>
-            </figure>
-
-            <figure>
-              <img src="moto-2.png" alt="Étude de la tenue mécanique du ressort d'amortisseur" />
-              <figcaption><strong>Étude mécanique :</strong> tenue mécanique du ressort (contraintes, facteur de sécurité, déplacement).</figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <!-- PROJET 2 : TRAIN -->
-        <article class="card">
-          <div class="proj-title">
-            <h3 style="margin:0;">Train électrique (jouet) — modélisation & assemblage</h3>
-            <small>CAO · Pièces · Assemblage</small>
-          </div>
-
-          <div class="tags">
-            <span class="tag">CAO</span>
-            <span class="tag">Assemblage</span>
-            <span class="tag">Rendu</span>
-          </div>
-
-          <p class="meta" style="margin:10px 0 0;">
-            Modélisation d’un train électrique miniature (jouet) et intégration en assemblage.
-          </p>
-
-          <div class="gallery one">
-            <figure>
-              <img src="train.png" alt="Train électrique jouet modélisé en CAO" />
-              <figcaption><strong>Train :</strong> modèle CAO du train électrique (jouet).</figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <!-- PROJET 3 : PIECES COMPLEMENTAIRES TRAIN -->
-        <article class="card">
-          <div class="proj-title">
-            <h3 style="margin:0;">Pièces complémentaires — intégration dans le projet train</h3>
-            <small>CAO · Détails · Intégration</small>
-          </div>
-
-          <div class="tags">
-            <span class="tag">Pièces</span>
-            <span class="tag">Interfaces</span>
-            <span class="tag">Intégration</span>
-          </div>
-
-          <p class="meta" style="margin:10px 0 0;">
-            Ensemble de pièces complémentaires conçues pour être intégrées au projet du train (ajustements, interfaces, compléments).
-          </p>
-
-          <div class="gallery one">
-            <figure>
-              <img src="train-pieces.png" alt="Pièces complémentaires pour le projet train" />
-              <figcaption><strong>Pièces complémentaires :</strong> composants additionnels modélisés et préparés pour l’intégration.</figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <!-- PROJET 4 : MOTEUR 206 -->
-        <article class="card">
-          <div class="proj-title">
-            <h3 style="margin:0;">Moteur Peugeot 206 — modélisation CAO</h3>
-            <small>CAO · Mécanique · Assemblage</small>
-          </div>
-
-          <div class="tags">
-            <span class="tag">Moteur</span>
-            <span class="tag">Modélisation</span>
-            <span class="tag">Assemblage</span>
-          </div>
-
-          <p class="meta" style="margin:10px 0 0;">
-            Modélisation CAO d’un moteur de Peugeot 206, avec focus sur l’organisation des composants et l’assemblage.
-          </p>
-
-          <div class="gallery one">
-            <figure>
-              <img src="moteur-206.png" alt="Moteur Peugeot 206 modélisé en CAO" />
-              <figcaption><strong>Moteur 206 :</strong> représentation CAO du moteur (Peugeot 206).</figcaption>
-            </figure>
-          </div>
-        </article>
-
+      <div class="tags">
+        <span class="tag">CAO</span>
+        <span class="tag">Assemblage</span>
       </div>
-    </section>
 
-    <!-- COMPETENCES -->
-    <section id="competences">
-      <h2>Compétences</h2>
-      <div class="grid">
-        <div class="card">
-          <p class="meta" style="margin:0;">
-            <strong>CAO :</strong> CATIA V5 R19 (modélisation, assemblage, rendu)<br>
-            <strong>Conception :</strong> pièces, sous-ensembles, intégration<br>
-            <strong>Analyse :</strong> notions de tenue mécanique (contraintes, FS, déplacements)
-          </p>
-        </div>
-      </div>
-    </section>
+      <p class="meta">
+        Modélisation d’un train miniature et intégration en assemblage.
+      </p>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <div class="contact">
-          <div><span>Email :</span> ton.email@exemple.com</div>
-          <div><span>LinkedIn :</span> <a href="https://www.linkedin.com/">à mettre</a></div>
-          <div><span>GitHub :</span> <a href="https://github.com/hydroxpro">hydroxpro</a></div>
-        </div>
+      <div class="gallery">
+        <figure>
+          <img src="train.png">
+          <figcaption>
+            <strong>Train :</strong> modèle CAO du train électrique.
+          </figcaption>
+        </figure>
       </div>
-    </section>
+    </div>
+
+    <!-- PROJET PIECES TRAIN -->
+    <div class="card">
+      <h3>Pièces complémentaires — projet train</h3>
+
+      <div class="tags">
+        <span class="tag">Pièces</span>
+        <span class="tag">Intégration</span>
+      </div>
+
+      <p class="meta">
+        Conception de pièces complémentaires destinées à être intégrées dans le projet du train.
+      </p>
+
+      <div class="gallery">
+        <figure>
+          <img src="train-pieces.png">
+          <figcaption>
+            <strong>Pièces complémentaires :</strong> composants additionnels modélisés pour l’intégration.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- PROJET MOTEUR -->
+    <div class="card">
+      <h3>Moteur Peugeot 206 — modélisation CAO</h3>
+
+      <div class="tags">
+        <span class="tag">Moteur</span>
+        <span class="tag">Assemblage</span>
+      </div>
+
+      <p class="meta">
+        Modélisation CAO d’un moteur de Peugeot 206 avec organisation des composants.
+      </p>
+
+      <div class="gallery">
+        <figure>
+          <img src="moteur-206.png">
+          <figcaption>
+            <strong>Moteur 206 :</strong> représentation CAO du moteur.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
 
     <footer>
       © KHARRAT Hugo — Portfolio
     </footer>
+
   </div>
 </body>
 </html>
